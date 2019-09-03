@@ -1,12 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/user");
 const redis = require("redis");
-//const client = redis.createClient();
-
-client.on("connect", () => {
-  console.log("redis connected");
-});
 
 router.get("/user/:username", (req, res) => {
     var user = req.params.username;
