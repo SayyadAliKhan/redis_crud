@@ -2,9 +2,11 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 - name: 'redis'
+  args: ['sleep', '10000']
   env:
   - 'REDISHOST=127.0.0.1'
   - 'REDISPORT=6379'
+  timeout: 15000s
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
 - name: "gcr.io/cloud-builders/gcloud"
