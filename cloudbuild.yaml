@@ -6,7 +6,7 @@ steps:
   env:
   - 'REDISHOST=127.0.0.1'
   - 'REDISPORT=6379'
-  timeout: 15000s
+  timeout: 500s
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
 - name: "gcr.io/cloud-builders/gcloud"
