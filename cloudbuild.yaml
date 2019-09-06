@@ -3,9 +3,7 @@ steps:
   args: ['install']
 - name: 'redis'
   args: ['sleep', '100s'] 
-  env:
-  - 'REDISHOST=127.0.0.1'
-  - 'REDISPORT=6379'
+  env: ['REDISHOST=127.0.0.1', 'REDISPORT=6379']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
 - name: "gcr.io/cloud-builders/gcloud"
