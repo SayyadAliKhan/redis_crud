@@ -2,8 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 - name: 'redis'
-  env: ['REDISHOST=127.0.0.1', 'REDISPORT=6379']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["run"]
+  args: ["app deploy"]
