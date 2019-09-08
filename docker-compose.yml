@@ -5,11 +5,10 @@ services:
     container_name: redis
     expose:
       - 6379
- 
-app:
-  # some definitions
-  links:
-    - redis
-  environment:
-    - REDIS_URL=redis://redis
-    # rest of the environment definitions
+  app:
+    # some definitions
+    links:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis
+      # rest of the environment definitions
