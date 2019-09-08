@@ -1,7 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
+- name: 'docker/compose:1.24.1' # you can use the version of your choice
+  env: ['up', '-d']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
+  env:
+  - 'HOST=redis' # name of the running container
+  - 'PORT=6379'
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app deploy"]
