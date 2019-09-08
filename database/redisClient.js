@@ -7,7 +7,6 @@ const nconf = require('nconf');
 nconf
   .argv()
   .env()
-  .file('keys.json');
 
 // [START gae_flex_node_redis]
 // Connect to a redis server provisioned over at
