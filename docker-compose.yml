@@ -6,7 +6,9 @@ services:
     expose:
       - 6379
   app:
-    # some definitions
+    build: ./
+    ports:
+    - 3000:3000
     links:
       - redis
     environment:
