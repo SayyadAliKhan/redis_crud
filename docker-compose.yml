@@ -1,9 +1,10 @@
 version: '3'
-redis:
-  image: redis
-  container_name: redis
-  expose:
-    - 6379
+services:
+  redis:
+    image: redis
+    container_name: redis
+    expose:
+      - 6379
  
 app:
   # some definitions
