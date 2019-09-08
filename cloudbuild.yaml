@@ -6,7 +6,7 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
   env:
-  - 'HOST=redis' # name of the running container
+  - 'HOST=127.0.0.1' # name of the running container
   - 'PORT=6379'
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
